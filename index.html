@@ -31,11 +31,9 @@
     
     .hero { background-color: var(--dark-blue); color: white; padding: 80px 0; position: relative; overflow: hidden; }
     .hero-bg {
-      position: absolute;
-      inset: 0;
+      position: absolute; inset: 0;
       background: url('https://plus.unsplash.com/premium_photo-1681966883482-8663ac9a95a7?q=80') center/cover no-repeat;
-      opacity: 0.15;
-      z-index: 1;
+      opacity: 0.15; z-index: 1;
     }
     .hero .container { position: relative; z-index: 2; }
     .hero h1 { font-size: 3.2rem; font-weight: 700; }
@@ -47,14 +45,9 @@
     
     #doctors { background-color: #f0f4f8; }
     .specialist-card {
-      background-color: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
-      transition: all 0.3s ease;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
+      background-color: white; border-radius: 8px; overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07); transition: all 0.3s ease;
+      text-align: center; display: flex; flex-direction: column;
     }
     .specialist-card:hover { transform: translateY(-8px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
     .specialist-card .card-header { background-color: var(--bs-primary); padding: 10px; }
@@ -65,70 +58,45 @@
     .specialist-card .card-body { background-color: var(--bs-primary); color: white; padding: 20px 15px; flex-grow: 1; }
     .specialist-card .card-body h5 { font-weight: 700; margin-bottom: 8px; }
     .specialist-card .card-body p { font-size: 0.9rem; opacity: 0.9; }
-    /* تم التعديل: إضافة تنسيق المواعيد داخل كرت الطبيب */
     .specialist-card .doctor-schedule {
-      margin-top: 15px;
-      padding-top: 10px;
-      border-top: 1px solid rgba(255, 255, 255, 0.3);
-      text-align: right;
-      font-size: 0.85rem;
+      margin-top: 15px; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.3);
+      text-align: right; font-size: 0.85rem;
     }
     .specialist-card .doctor-schedule p { margin-bottom: 5px; }
     .specialist-card .doctor-schedule i { margin-inline-end: 8px; }
 
-    /* تم التعديل: إعادة تصميم قسم الحجز بالكامل */
     .booking-section-new {
-      position: relative;
-      padding: 100px 0;
-      color: white;
+      position: relative; padding: 100px 0; color: white;
       background: url('https://images.unsplash.com/photo-1538108149393-fbbd81895907?q=80&w=2128') center/cover no-repeat;
     }
-    .booking-section-new::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-color: rgba(10, 25, 47, 0.8); /* --dark-blue with opacity */
-      z-index: 1;
-    }
+    .booking-section-new::before { content: ''; position: absolute; inset: 0; background-color: rgba(10, 25, 47, 0.8); z-index: 1; }
     .booking-section-new .container { position: relative; z-index: 2; }
     .booking-info-item { display: flex; align-items: flex-start; margin-bottom: 25px; }
     .booking-info-item .icon { font-size: 1.8rem; color: var(--accent-orange); margin-inline-end: 20px; }
     .booking-info-item h5 { font-weight: 700; margin-bottom: 5px; }
     .booking-info-item p { color: var(--text-light); }
     .booking-form-card {
-      background: white;
-      color: #333;
-      border-radius: 16px;
-      padding: 35px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      background: white; color: #333; border-radius: 16px;
+      padding: 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     }
-    .booking-form-card .btn-primary {
-      background-color: var(--accent-orange);
-      border-color: var(--accent-orange);
-    }
-    .booking-form-card .btn-primary:hover {
-      background-color: var(--accent-orange-hover);
-      border-color: var(--accent-orange-hover);
-    }
+    .booking-form-card .btn-primary, .hero-booking-card .btn-primary { background-color: var(--accent-orange); border-color: var(--accent-orange); }
+    .booking-form-card .btn-primary:hover, .hero-booking-card .btn-primary:hover { background-color: var(--accent-orange-hover); border-color: var(--accent-orange-hover); }
     
-    /* تم التعديل: إضافة خلفية صورة لقسم التواصل */
     .contact-section-new {
-        position: relative;
-        padding: 100px 0;
+        position: relative; padding: 100px 0;
         background: url('https://images.unsplash.com/photo-1584467735871-8e85353a8413?q=80&w=1974') center/cover no-repeat;
     }
-    .contact-section-new::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-color: rgba(248, 249, 250, 0.9); /* --light-gray with opacity */
-    }
+    .contact-section-new::before { content: ''; position: absolute; inset: 0; background-color: rgba(248, 249, 250, 0.9); z-index: 1; }
     .contact-section-new .container { position: relative; z-index: 2; }
     .contact-info-card {
-        border: none;
-        backdrop-filter: blur(5px);
-        background-color: rgba(255,255,255,0.8);
+        border: none; backdrop-filter: blur(5px); background-color: rgba(255,255,255,0.8);
+        height: 100%; border-radius: 16px; padding: 30px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
+    .contact-info-item { display: flex; align-items: center; margin-bottom: 20px; font-size: 1.1rem; }
+    .contact-info-item i { font-size: 1.5rem; color: var(--accent-orange); width: 40px; }
+    .contact-info-card .social-icons a { font-size: 1.5rem; margin-inline-start: 15px; color: #343a40; transition: color 0.3s; }
+    .contact-info-card .social-icons a:hover { color: var(--accent-orange); }
 
     .footer { background-color: var(--dark-blue); color: var(--text-light); text-align: center; padding: 40px 20px; }
   </style>
@@ -136,15 +104,50 @@
 <body>
   
   <div class="modal fade" id="successModal" tabindex="-1">
-    <!-- ... محتوى المودال يبقى كما هو ... -->
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0"><h5 class="modal-title">✅ تم الحجز بنجاح!</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+        <div class="modal-body text-center"><p id="modalSummary"></p></div>
+        <div class="modal-footer border-0 justify-content-center"><a id="whatsappLink" class="btn btn-success" target="_blank"><i class="fab fa-whatsapp"></i> تأكيد عبر واتساب</a></div>
+      </div>
+    </div>
   </div>
 
   <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-    <!-- ... محتوى الشريط العلوي يبقى كما هو ... -->
+    <div class="container">
+      <a class="navbar-brand" href="#">
+          <img src="./images/apple-touch-icon.png" alt="شعار عيادة الشامي">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="#doctors">الأطباء</a></li>
+          <li class="nav-item"><a class="nav-link" href="#booking">الحجز</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">تواصل معنا</a></li>
+        </ul>
+        <a href="#booking" class="btn btn-navbar d-none d-lg-inline-block">احجز الآن</a>
+      </div>
+    </div>
   </nav>
 
   <header class="hero" id="home">
-    <!-- ... محتوى الهيرو يبقى كما هو ... -->
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7 text-lg-start text-center">
+          <h1>رعاية طبية تثق بها، لحياة أفضل</h1>
+          <p class="lead my-4">نخبة من الأطباء المتخصصين وتقنيات حديثة لضمان راحتك وصحتك.</p>
+        </div>
+        <div class="col-lg-5">
+          <div id="heroBookingCard" class="hero-booking-card">
+            <h4 class="mb-3">حجز سريع</h4>
+            <div class="mb-2"><select id="heroDoctorSelect" class="form-select"><option value="" disabled selected>اختر الطبيب</option></select></div>
+            <div class="mb-2"><input type="date" id="heroDateInput" class="form-control"></div>
+            <button id="heroBookBtn" class="btn btn-primary w-100">متابعة الحجز</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main>
@@ -157,7 +160,6 @@
       </div>
     </section>
 
-    <!-- تم التعديل: استبدال قسم الحجز القديم بالجديد -->
     <section class="booking-section-new" id="booking">
         <div class="container">
             <div class="row align-items-center g-5">
@@ -199,12 +201,11 @@
           </div>
     </section>
     
-    <!-- تم التعديل: استبدال قسم التواصل القديم بالجديد -->
     <section class="contact-section-new" id="contact">
       <div class="container">
         <h2 class="section-title">تواصل معنا</h2>
         <div class="row g-4 align-items-center justify-content-center">
-          <div class="col-lg-6">
+          <div class="col-lg-6 col-md-8">
             <div class="contact-info-card">
               <div class="contact-info-item"><i class="fas fa-map-marker-alt"></i><span>446 ش فيصل - برج النصر، القاهرة، مصر</span></div>
               <div class="contact-info-item"><i class="fas fa-phone"></i><a href="tel:+201006404614" class="text-decoration-none text-dark">01006404614</a></div>
@@ -214,7 +215,7 @@
               <div class="social-icons"><a href="#" target="_blank"><i class="fab fa-instagram"></i></a><a href="#" target="_blank"><i class="fab fa-twitter"></i></a><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></div>
             </div>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6 col-md-8">
             <div class="ratio ratio-16x9" style="border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4053.110004188214!2d31.195507575552554!3d30.013462674939177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145846edbfabd573%3A0xf1694f2f21218509!2sDr.%20Abdelaziz%20Moussa%20-%20Alshomoukh%20Dentistry!5e1!3m2!1sen!2seg!4v1762983722731!5m2!1sen!2seg" allowfullscreen="" loading="lazy"></iframe>
             </div>
@@ -226,24 +227,76 @@
   </main>
   
   <footer class="footer">
-    <!-- ... محتوى الفوتر يبقى كما هو ... -->
+    <div class="container"><p>© 2025 عيادة الشامي. جميع الحقوق محفوظة.</p></div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // ⚡⚡⚡ تنبيه هام جدًا ⚡⚡⚡
-    // تأكد من أن هذا الرابط هو الرابط الصحيح من عملية النشر الأخيرة
+    // =================================================================
+    // JavaScript - النسخة النهائية والكاملة (تم إصلاحها بالكامل)
+    // =================================================================
+
+    // ⚡⚡⚡ تأكد من أن هذا الرابط هو الرابط الصحيح من عملية النشر الأخيرة ⚡⚡⚡
     const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbyow5jzkiMwO92mM7u9FjCrmfYcw55PRa3kalEj7JNODUMt0qQJ1vx6ezLHStgM89I9iA/exec';
     
     const CLINIC_WHATSAPP_NUMBER = '201006404614';
 
-    // ... جميع متغيرات JavaScript تبقى كما هي ...
+    // تم الإصلاح: تعريف جميع متغيرات الواجهة الرسومية (DOM Elements)
     const doctorCardsContainer = document.getElementById('doctorCardsContainer');
-    // ...الخ
+    const mainForm = document.getElementById('mainBookingForm');
+    const mainDoctorSelect = document.getElementById('mainDoctorSelect');
+    const mainDateInput = document.getElementById('mainDateInput');
+    const mainTimeSelect = document.getElementById('mainTimeSelect');
+    const mainSubmitButton = document.getElementById('mainSubmitButton');
+    const mainMessageArea = document.getElementById('mainMessageArea');
+    const mainPatientNameInput = document.getElementById('mainPatientName');
+    const mainPatientPhoneInput = document.getElementById('mainPatientPhone');
+    
+    const heroDoctorSelect = document.getElementById('heroDoctorSelect');
+    const heroDateInput = document.getElementById('heroDateInput');
+    const heroBookBtn = document.getElementById('heroBookBtn');
+    
+    const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+    let currentToken = null;
+    let doctorSchedules = null;
 
-    // ... باقي دوال JavaScript (DOMContentLoaded, generateTokenOnLoad, etc.) تبقى كما هي ...
+    const today = new Date().toISOString().split('T')[0];
+    mainDateInput.min = today;
+    heroDateInput.min = today;
 
-    // تم التعديل: تحديث دالة تحميل الأطباء لإضافة المواعيد
+    // تم الإصلاح: تفعيل الـ Event Listeners عند تحميل الصفحة
+    document.addEventListener('DOMContentLoaded', async () => {
+      await generateTokenOnLoad();
+      await loadDoctorSchedules();
+      
+      mainDoctorSelect.addEventListener('change', updateAvailableTimes);
+      mainDateInput.addEventListener('change', updateAvailableTimes);
+      
+      heroBookBtn.addEventListener('click', () => {
+        const selectedDoctor = heroDoctorSelect.value;
+        const selectedDate = heroDateInput.value;
+        if (!selectedDoctor || !selectedDate) {
+          alert('اختر الطبيب والتاريخ أولاً للمتابعة');
+          return;
+        }
+        mainDoctorSelect.value = selectedDoctor;
+        mainDateInput.value = selectedDate;
+        updateAvailableTimes();
+        document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    async function generateTokenOnLoad() {
+      try {
+        const res = await fetch(`${WEB_APP_URL}?action=generateToken`);
+        if (!res.ok) throw new Error('فشل طلب التوكن');
+        currentToken = await res.text();
+      } catch (err) {
+        console.error('Token generation error', err);
+        showMessage('لا يمكن بدء جلسة آمنة. يرجى تحديث الصفحة.', 'danger', document.querySelector('.hero-booking-card'));
+      }
+    }
+
     async function loadDoctorSchedules() {
       try {
         const res = await fetch(`${WEB_APP_URL}?action=getDoctorSchedules`);
@@ -298,8 +351,87 @@
         doctorCardsContainer.innerHTML = `<p class="alert alert-danger text-center w-100">حدث خطأ أثناء تحميل بيانات الأطباء. يرجى تحديث الصفحة. (${err.message})</p>`;
       }
     }
-    
-    // ... باقي دوال JavaScript (updateAvailableTimes, mainForm.addEventListener, etc.) تبقى كما هي ...
+
+    async function updateAvailableTimes() {
+      const doctorKey = mainDoctorSelect.value;
+      const date = mainDateInput.value;
+      mainTimeSelect.disabled = true;
+      mainTimeSelect.innerHTML = '<option>جاري تحميل المواعيد...</option>';
+      if (!doctorKey || !date) {
+        mainTimeSelect.innerHTML = '<option value="" selected disabled>اختر طبيبًا وتاريخًا</option>';
+        return;
+      }
+      try {
+        const res = await fetch(`${WEB_APP_URL}?action=getAvailableTimes&doctor=${encodeURIComponent(doctorKey)}&date=${encodeURIComponent(date)}`);
+        if (!res.ok) throw new Error('فشل تحميل الأوقات المتاحة');
+        const times = await res.json();
+        mainTimeSelect.innerHTML = '';
+        if (Array.isArray(times) && times.length > 0) {
+          times.forEach(t => mainTimeSelect.add(new Option(t, t)));
+          mainTimeSelect.disabled = false;
+        } else {
+          mainTimeSelect.innerHTML = '<option value="" disabled>لا توجد مواعيد متاحة</option>';
+        }
+      } catch (err) {
+        console.error('Failed to get available times:', err);
+        mainTimeSelect.innerHTML = '<option value="" disabled>خطأ في تحميل المواعيد</option>';
+      }
+    }
+
+    mainForm.addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      mainMessageArea.innerHTML = '';
+      if (!mainForm.checkValidity() || !currentToken) {
+        mainForm.classList.add('was-validated');
+        if (!currentToken) showMessage('جلسة منتهية، يرجى إعادة تحميل الصفحة.', 'danger');
+        return;
+      }
+      mainSubmitButton.disabled = true;
+      mainSubmitButton.innerHTML = `<span class="spinner-border spinner-border-sm"></span> جارٍ التأكيد...`;
+
+      const payload = {
+        patientName: mainPatientNameInput.value.trim(),
+        patientPhone: mainPatientPhoneInput.value.trim(),
+        doctor: mainDoctorSelect.value,
+        date: mainDateInput.value,
+        time: mainTimeSelect.value,
+        token: currentToken
+      };
+
+      try {
+        const res = await fetch(WEB_APP_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(payload)
+        });
+
+        if (!res.ok) throw new Error(`فشل طلب الحجز. الحالة: ${res.status}`);
+        const result = await res.json();
+        
+        if (result.status === 'success') {
+          document.getElementById('modalSummary').textContent = `${payload.patientName} - ${payload.date} ${payload.time} مع ${doctorSchedules[payload.doctor].name}`;
+          const waMsg = `مرحباً عيادة الشامي، لقد قمت بتأكيد حجز باسم ${payload.patientName} مع ${doctorSchedules[payload.doctor].name} في ${payload.date} الساعة ${payload.time}.`;
+          document.getElementById('whatsappLink').href = `https://wa.me/${CLINIC_WHATSAPP_NUMBER}?text=${encodeURIComponent(waMsg)}`;
+          successModal.show();
+          mainForm.reset();
+          mainForm.classList.remove('was-validated');
+          mainTimeSelect.innerHTML = '<option value="" selected disabled>اختر طبيبًا وتاريخًا</option>';
+        } else {
+          showMessage(result.message || 'حدث خطأ غير معروف أثناء الحجز.', 'danger');
+        }
+      } catch (err) {
+        console.error('Fetch Error:', err);
+        showMessage('حدث خطأ في الاتصال. يرجى التحقق من الشبكة والمحاولة مرة أخرى.', 'danger');
+      } finally {
+        await generateTokenOnLoad();
+        mainSubmitButton.disabled = false;
+        mainSubmitButton.innerHTML = 'تأكيد الحجز الآن';
+      }
+    });
+
+    function showMessage(msg, type = 'danger', container = mainMessageArea) {
+      container.innerHTML = `<div class="alert alert-${type} alert-dismissible fade show" role="alert">${msg}<button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>`;
+    }
   </script>
 </body>
 </html>
